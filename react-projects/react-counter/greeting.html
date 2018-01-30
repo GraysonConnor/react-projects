@@ -20,8 +20,29 @@
         }
       }
 
+      class Views extends React.Component {
+        constructor(props){
+          super(props);
+          this.state = {
+            number: 87
+          }
+        }
+
+        render() {
+          return (
+            <div>
+               <h1>Your website has been viewed {this.props.number} times.</h1>
+               <h3>Current live viewers: {this.state.number}</h3>
+            </div>
+          );
+        }
+      }
+
       ReactDOM.render(
-         <Greeting name="Bloc Student"/>, document.getElementById('app')
+        <div>
+         <Greeting name="Bloc Student"/>
+         <Views number="422"/>
+         </div>, document.getElementById('app')
       );
 
     </script>
